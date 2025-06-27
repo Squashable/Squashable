@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Josh Hudgell's Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="icon.png" type="image/png">
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css?family=Ubuntu:400,700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Ubuntu', Arial, Helvetica, sans-serif;
+      margin: 0;
+      background: #fff; 
+      color: #222c44;      /* dark blue-gray for text for better contrast */
+    }
+
+    .header {
+      padding: 80px;
+      text-align: center;
+      background: linear-gradient(90deg, #eaf4fb 0%, #f4f8fb 100%);
+      color: #222c44;
+      border-radius: 16px;
+      box-shadow: 0 4px 24px rgba(34, 44, 68, 0.06);
+      margin-bottom: 32px;
+    }
+
+    .header h1 {
+      font-size: 40px;
+    }
+
+    .navbar {
+      background: linear-gradient(90deg, #eaf4fb 0%, #dbeafe 100%);
+      display: flex;
+      align-items: center;
+      padding: 0 10px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 8px rgba(34,44,68,0.06);
+      border-radius: 12px;
+      margin-bottom: 24px;
+    }
+
+    .navbar a, .dropdown .dropbtn {
+      color: #222c44;
+      padding: 14px 20px;
+      text-decoration: none;
+      background: none;
+      border: none;
+      cursor: pointer;
+      font-size: 16px;
+      font-family: inherit;
+      transition: background 0.2s, color 0.2s;
+      border-radius: 8px;
+    }
+
+    .navbar a:hover,
+    .dropdown:hover .dropbtn {
+      background-color: #b5d6f6; /* lighter blue on hover */
+      color: #171f83;
+    }
+
+    .navbar a.active {
+      background-color: #90caf9;
+      color: #171f83;
+    }
+
+    .dropdown {
+      position: relative;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background: #fff;
+      min-width: 180px;
+      box-shadow: 0px 8px 16px rgba(34,44,68,0.08);
+      top: 50px;
+      z-index: 1001;
+      border-radius: 12px;
+      overflow: hidden;
+    }
+    .dropdown-content a {
+      color: #222c44;
+      padding: 10px 16px;
+      text-decoration: none;
+      display: block;
+      background: none;
+      transition: background 0.2s, color 0.2s;
+    }
+    .dropdown-content a:hover {
+      background: #e3f0fb;
+      color: #171f83;
+    }
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    .main {
+      display: flex;
+      justify-content: center;
+      padding: 40px 20px;
+    }
+
+    .document {
+      font-family: 'Ubuntu', Arial, Helvetica, sans-serif;
+      background: #fff;
+      color: #222c44;
+      padding: 2rem 3rem;
+      max-width: 700px;
+      width: 100%;
+      box-shadow: 0 0 10px rgba(34,44,68,0.08);
+      border-radius: 12px;
+    }
+
+    .document h1 {
+      text-align: center;
+      margin-bottom: 1.5rem;
+    }
+
+    .document p {
+      line-height: 1.6;
+      text-align: justify;
+    }
+
+    .footer {
+      padding: 20px;
+      text-align: center;
+      background: #eaf4fb;
+      color: #222c44;
+      border-radius: 0 0 12px 12px;
+    }
+
+    @media screen and (max-width: 700px) {
+      .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .navbar a,
+      .dropdown .dropbtn {
+        width: 100%;
+        text-align: left;
+      }
+
+      .dropdown-content {
+        position: static;
+        box-shadow: none;
+      }
+    }
+  </style>
+</head>
+<body>
+
+
+
+</div>
+<div class="navbar">
+  <a href="website-home.html">Home</a>
+  <a href="Artifical.html">AI Perspective</a>
+  <div class="dropdown">
+    <button class="dropbtn">
+      Projects
+      <svg width="18" height="18" viewBox="0 0 20 20" style="vertical-align: middle; margin-left: 6px;" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M6 8l4 4 4-4" stroke="#222c44" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </button>
+    <div class="dropdown-content">
+      <a href="website-turret.html">Turret</a>
+      <a href="website-model-rail.html">Model Rail</a>
+      <a href="website-project.html">Website Building</a>
+      <a href="#">Future Project 02</a>
+      <a href="#">Future Project 03</a>
+      <a href="#">Future Project 04</a>
+      <a href="#">Future Project 05</a>
+      <a href="#">Future Project 06</a>
+      <a href="#">Future Project 07</a>
+    </div>
+  </div>
+</div>
+<div class="selection-bar"></div>
+<div class="page-title-box" id="page-title"></div>
+
+<script>
+  // Set page title dynamically
+  const fileName = window.location.pathname.split("/").pop().split(".")[0];
+  let displayName = fileName
+    .replace("website-", "")
+    .replace(/-/g, " ")
+    .replace(/\b\w/g, c => c.toUpperCase());
+
+  if (fileName === "Artifical") displayName = "My Stance on AI Use";
+  if (fileName === "website-home") displayName = "Welcome to My Portfolio";
+
+  document.getElementById("page-title").textContent = displayName;
+
+  // Highlight current nav link
+  const currentPage = window.location.pathname.split("/").pop();
+  document.querySelectorAll(".navbar a").forEach(link => {
+    if (link.getAttribute("href") === currentPage) {
+      link.classList.add("active");
+    }
+  });
+</script>
+<script>
+  fetch("navbar.html")
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById("navbar-placeholder").innerHTML = data;
+
+      // Set the header title based on the page
+      const pageMap = {
+        "website-home.html": "Welcome to My Portfolio<br><span style='font-size:22px;'>Joshua Hudgell BEng(Hons) Mechatronics Engineering </span>",
+        "Artifical.html": "My Stance on AI Use",
+        "website-turret.html": "Turret",
+        "website-model-rail.html": "Model Rail",
+        "website-project.html": "Website Building"
+      };
+      const currentPage = window.location.pathname.split("/").pop();
+      const title = pageMap[currentPage] || "Portfolio";
+      document.getElementById("page-title").innerHTML = title;
+
+      // Highlight current nav link
+      document.querySelectorAll(".navbar a").forEach(link => {
+        if (link.getAttribute("href") === currentPage) {
+          link.classList.add("active");
+        }
+      });
+    });
+</script>
+</body>
+</html>
