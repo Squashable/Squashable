@@ -5,7 +5,7 @@ fetch("navbar.html")
 
     // Set the header title based on the page
     const pageMap = {
-      "website-home.html": "Welcome to My Portfolio<br><span style='font-size:22px;'>Joshua Hudgell BEng (Hons) Mechatronics Engineering </span>",
+      "index.html": "Welcome to My Portfolio<br><span style='font-size:22px;'>Joshua Hudgell BEng (Hons) Mechatronics Engineering </span>",
       "Artifical.html": "My Stance on AI Use",
       "website-turret.html": "Turret",
       "website-model-rail.html": "Model Rail",
