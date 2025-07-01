@@ -1,48 +1,125 @@
-<!-- Load the navbar -->
-<div id="navbar-placeholder"></div>
-<script src="navbar-loader.js"></script>
+import React from "react";
+import Navbar from "../components/Navbar";
+import "../App.css"; // Import your global styles
 
-
-<div class="parent">
-    <div class="div10" style="background: linear-gradient(90deg, #eaf4fb 0%, #dbeafe 100%); border-radius: 8px; box-shadow: 0 8px 32px rgba(0,0,0,0.08); padding: 18px 28px; text-align: left;">
-        <h2 style="margin-top: 0;">Welcome!</h2>
-        <p>
-            Hi, I'm Josh Hudgell.<br>
-            This is my portfolio.<br>
-            
-        </p>
-    </div>
-    <div class="div11" style="display: flex; align-items: center; justify-content: center;">
-        <div style="background: linear-gradient(90deg, #eaf4fb 0%, #dbeafe 100%); border-radius: 8px; box-shadow: 0 8px 32px rgba(0,0,0,0.08); padding: 5px; flex: 0 0 auto; display: inline-block;">
-            <img src="home-page-files/me.jpg"
-                 alt="Photo of me"
-                 style="max-width: 450px; box-shadow: 0 4px 16px rgba(0,0,0,0.10); border: 2px solid #eaf4fb; background: #dbeafe;">
+export default function Home() {
+  return (
+    <>
+      <Navbar />
+      <div className="parent">
+        <div
+          className="div10"
+          style={{
+            background: "linear-gradient(90deg, #eaf4fb 0%, #dbeafe 100%)",
+            borderRadius: 8,
+            boxShadow: "0 8px 32px rgba(0,0,0,0.08)",
+            padding: "18px 28px",
+            textAlign: "left",
+          }}
+        >
+          <h2 style={{ marginTop: 0 }}>Welcome!</h2>
+          <p>
+            Hi, I'm Josh Hudgell.<br />
+            This is my portfolio.<br />
+          </p>
         </div>
-    </div>
-    <div class="div13" style="background: linear-gradient(90deg, #eaf4fb 0%, #dbeafe 100%); border-radius: 8px; box-shadow: 0 8px 32px rgba(0,0,0,0.08); padding: 18px 28px;">   HAMLET (Act 3, Scene 1):
-"To be, or not to be: that is the question:
-Whether 'tis nobler in the mind to suffer
-The slings and arrows of outrageous fortune,
-Or to take arms against a sea of troubles,
-And by opposing end them...</div>
-    <div class="div14" style="background: linear-gradient(90deg, #eaf4fb 0%, #dbeafe 100%); border-radius: 8px; box-shadow: 0 8px 32px rgba(0,0,0,0.08); padding: 18px 28px;">   HAMLET (Act 3, Scene 1):
-"To be, or not to be: that is the question:
-Whether 'tis nobler in the mind to suffer
-The slings and arrows of outrageous fortune,
-Or to take arms against a sea of troubles,
-And by opposing end them...</div>
-    <div class="div17" style="background: linear-gradient(90deg, #eaf4fb 0%, #dbeafe 100%); border-radius: 8px; box-shadow: 0 8px 32px rgba(0,0,0,0.08); padding: 18px 28px;">   HAMLET (Act 3, Scene 1):
-"To be, or not to be: that is the question:
-Whether 'tis nobler in the mind to suffer
-The slings and arrows of outrageous fortune,
-Or to take arms against a sea of troubles,
-And by opposing end them...</div>
-    <div class="div18" style="background: linear-gradient(90deg, #eaf4fb 0%, #dbeafe 100%); border-radius: 8px; box-shadow: 0 8px 32px rgba(0,0,0,0.08); padding: 18px 28px;">   HAMLET (Act 3, Scene 1):
-"To be, or not to be: that is the question:
-Whether 'tis nobler in the mind to suffer
-The slings and arrows of outrageous fortune,
-Or to take arms against a sea of troubles,
-And by opposing end them...</div>
-</div>
+        <div
+          className="div11"
+          style={{
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+          }}
+        >
+          <div
+            style={{
+              background: "linear-gradient(90deg, #eaf4fb 0%, #dbeafe 100%)",
+              borderRadius: 8,
+              boxShadow: "0 8px 32px rgba(0,0,0,0.08)",
+              padding: 5,
+              flex: "0 0 auto",
+              display: "inline-block",
+            }}
+          >
+            <img
+              src="/home-page-files/me.jpg"
+              alt="Photo of me"
+              style={{
+                maxWidth: 450,
+                boxShadow: "0 4px 16px rgba(0,0,0,0.10)",
+                border: "2px solid #eaf4fb",
+                background: "#dbeafe",
+              }}
+            />
+          </div>
+        </div>
+        <div
+          className="div13"
+          style={{
+            background: "linear-gradient(90deg, #eaf4fb 0%, #dbeafe 100%)",
+            borderRadius: 8,
+            boxShadow: "0 8px 32px rgba(0,0,0,0.08)",
+            padding: "18px 28px",
+          }}
+        >
+          HAMLET (Act 3, Scene 1):<br />
+          "To be, or not to be: that is the question:<br />
+          Whether 'tis nobler in the mind to suffer<br />
+          The slings and arrows of outrageous fortune,<br />
+          Or to take arms against a sea of troubles,<br />
+          And by opposing end them...
+        </div>
+        <div
+          className="div14"
+          style={{
+            background: "linear-gradient(90deg, #eaf4fb 0%, #dbeafe 100%)",
+            borderRadius: 8,
+            boxShadow: "0 8px 32px rgba(0,0,0,0.08)",
+            padding: "18px 28px",
+          }}
+        >
+          HAMLET (Act 3, Scene 1):<br />
+          "To be, or not to be: that is the question:<br />
+          Whether 'tis nobler in the mind to suffer<br />
+          The slings and arrows of outrageous fortune,<br />
+          Or to take arms against a sea of troubles,<br />
+          And by opposing end them...
+        </div>
+        <div
+          className="div17"
+          style={{
+            background: "linear-gradient(90deg, #eaf4fb 0%, #dbeafe 100%)",
+            borderRadius: 8,
+            boxShadow: "0 8px 32px rgba(0,0,0,0.08)",
+            padding: "18px 28px",
+          }}
+        >
+          HAMLET (Act 3, Scene 1):<br />
+          "To be, or not to be: that is the question:<br />
+          Whether 'tis nobler in the mind to suffer<br />
+          The slings and arrows of outrageous fortune,<br />
+          Or to take arms against a sea of troubles,<br />
+          And by opposing end them...
+        </div>
+        <div
+          className="div18"
+          style={{
+            background: "linear-gradient(90deg, #eaf4fb 0%, #dbeafe 100%)",
+            borderRadius: 8,
+            boxShadow: "0 8px 32px rgba(0,0,0,0.08)",
+            padding: "18px 28px",
+          }}
+        >
+          HAMLET (Act 3, Scene 1):<br />
+          "To be, or not to be: that is the question:<br />
+          Whether 'tis nobler in the mind to suffer<br />
+          The slings and arrows of outrageous fortune,<br />
+          Or to take arms against a sea of troubles,<br />
+          And by opposing end them...
+        </div>
+      </div>
+    </>
+  );
+}
 
 
